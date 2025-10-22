@@ -1,0 +1,68 @@
+index
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido a la Página de Inicio</h1>
+    <ul>
+        <li><a href="lista_productos.php?categoria=electronica">Electrónica</a></li>
+        <li><a href="lista_productos.php?categoria=ropa">Ropa</a></li>
+        <li><a href="lista_productos.php?categoria=hogar">Hogar</a></li>
+    </ul>
+</body>
+</html>
+
+
+
+lista_productos
+
+
+
+<?php
+include 'includes/conexion.php';
+
+// Obtener la categoría de productos de la URL
+$categoria = $_GET['categoria'];
+
+// Preparar la consulta SQL dinámica basada en la categoría seleccionada
+$sql = "SELECT * FROM productos WHERE categoria = '$categoria'";
+$resultado = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Productos en la categoría <?php echo $categoria; ?></h1>
+    <ul>
+        <?php
+        // Mostrar los productos de la categoría seleccionada
+        if ($resultado->num_rows > 0) {
+            while ($row = $resultado->fetch_assoc()) {
+                echo "<li>" . $row['nombre'] . "</li>";
+            }
+        } else {
+            echo "<li>No hay productos en esta categoría</li>";
+        }
+        ?>
+    </ul>
+</body>
+</html>
+
+<?php
+// Cerrar la conexión
+$conn->close();
+?>
+
+
+
+

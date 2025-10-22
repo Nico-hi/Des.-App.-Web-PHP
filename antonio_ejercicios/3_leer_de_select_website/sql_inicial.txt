@@ -1,0 +1,13 @@
+-- Crear la tabla `tasks`
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    task VARCHAR(255) NOT NULL
+);
+
+-- Insertar algunos registros en la tabla `tasks`
+INSERT INTO tasks (task) VALUES
+('Comprar leche'),
+('Sacar al perro'),
+('Estudiar MySQL'),
+('Limpiar la casa'),
+('Hacer ejercicio');

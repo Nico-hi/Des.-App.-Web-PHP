@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* base.css */
+        :root {
+            --border-radius: 1.5rem;
+            --border-color: #333;
+            --bg-color: #f9f9f9;
+            --btn-bg: #fff;
+            --btn-hover: #e0e0e0;
+            --font-family: 'Segoe UI', sans-serif;
+            --font-size: 1.2rem;
+            --padding: 1rem;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            height: 2vw;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .calculator-container {
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--padding);
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .button-grid input[type="button"] , .calculator_output h1{
+            padding: var(--padding);
+            font-size: var(--font-size);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--btn-bg);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .button-grid input[type="button"]:hover {
+            background-color: var(--btn-hover);
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="calculadora_disenio.php" method="post">
+                <h1>Calculadora</h1>
+                <div class="calculator-container">
+                    <section class="calculator_output">
+                        <h1> </h1>
+                    </section>
+                    <section class="button-grid">
+                        <input type="button" value="1">
+                        <input type="button" value="2">
+                        <input type="button" value="3">
+                        <input type="button" value="+">
+                        <input type="button" value="4">
+                        <input type="button" value="5">
+                        <input type="button" value="6">
+                        <input type="button" value="-">
+                        <input type="button" value="7">
+                        <input type="button" value="8">
+                        <input type="button" value="9">
+                        <input type="button" value="*">
+                        <input type="button" value="clear">
+                        <input type="button" value="0">
+                        <input type="button" value="/">
+                        <input type="button" value="=">
+                    </section>
+                </div>
+            </form>
+
+            <script>
+                let buttons = document.querySelectorAll('.button-grid input[type="button"]');
+                let output = document.querySelector('.calculator_output h1');
+                let currentInput = '';
+
+                buttons.forEach(boton =>{
+                    boton.addEventListener('click',()=>{
+                        let value = boton.value;
+
+                        if(value === 'clear'){
+                            currentInput = '';
+                            output.textContent = '';
+                        } else if(value === '='){
+                            try{
+                                currentInput = eval(currentInput).toString();
+                                output.textContent = currentInput;
+                            } catch{
+                                output.textContent = 'Error';
+                                currentInput = '';
+                            }
+                        } else{
+                            currentInput += value;
+                            output.textContent = currentInput;
+                        }
+                    })
+                });
+            </script>
+    <br> <br> <br>
+
+    <form action="calculadora.php" method="get">
+        <label for="num1">
+            <input type="text" id="num1" name="num1" placeholder="Número 1"></label>
+        <!--
+        <label for="operacion"></label>
+        <input type="text" id="operacion" name="operacion" placeholder="Operación">
+ -->
+
+
+
+        <label for="operacion">
+            <select id="operacion" name="operacion">
+                <option value="suma">+</option>
+                <option value="resta">-</option>
+                <option value="multiplicar">*</option>
+                <option value="dividir">/</option>
+            </select>
+        </label>
+
+
+        <label for="num2">
+            <input type="text" id="num2" name="num2" placeholder="Número 2"></label>
+        <input type="submit" value="Calcular">
+
+    </form>
+</body>
+
+</html>
