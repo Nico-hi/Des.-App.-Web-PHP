@@ -1,0 +1,38 @@
+/* Estilos para el contenedor del carrito */
+#carrito {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Estilos para los elementos del carrito */
+.item-carrito {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Estilos para el botón de vaciar carrito */
+#vaciar-carrito {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#vaciar-carrito:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,15 @@
+-- Crear la tabla de usuarios
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL
+);
+
+-- Insertar algunos datos de ejemplo
+INSERT INTO usuarios (usuario, nombre, apellido, email, contrasena) VALUES
+('usuario1', 'Juan', 'Pérez', 'juan@example.com', 'contrasena1'),
+('usuario2', 'María', 'González', 'maria@example.com', 'contrasena2'),
+('usuario3', 'Pedro', 'Martínez', 'pedro@example.com', 'contrasena3');

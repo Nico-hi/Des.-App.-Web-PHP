@@ -20,7 +20,7 @@ $resultado = $conn->query($sql);
     <ul>
         <?php
         if ($resultado->num_rows > 0) {
-            for ($i = 0; $i < $resultado->num_rows; $i++) {
+            for ($i = 0; $i < $restado->num_rows; $i++) {
                 $row = $resultado->fetch_assoc();
                 echo "<li>" . $row['categoria'] . " " . $row['nombre'] . "</li>";
             }

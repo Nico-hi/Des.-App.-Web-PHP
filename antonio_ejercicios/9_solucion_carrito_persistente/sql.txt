@@ -1,0 +1,11 @@
+CREATE TABLE `usuarios` (
+  `usuario` varchar(50) NOT NULL,
+  `contrasena` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO usuarios (usuario, contrasena) VALUES ('usuario1', 'contrasena1');
+
+CREATE TABLE `carrito` (
+  `usuario` varchar(50) NOT NULL,
+  `producto` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
