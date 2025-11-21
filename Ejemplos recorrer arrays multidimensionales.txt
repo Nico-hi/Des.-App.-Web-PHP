@@ -1,0 +1,58 @@
+<?php
+// Array multidimensional indexado
+$cars = array(
+  array("Volvo", 22, 18),
+  array("BMW", 15, 13),
+  array("Saab", 5, 2),
+  array("Land Rover", 17, 15)
+);
+
+foreach ($cars as $car) {
+  echo "<strong>Marca:</strong> " . $car[0] . "<br>";
+  echo "En stock: " . $car[1] . "<br>";
+  echo "Vendidos: " . $car[2] . "<br>";
+  echo "<hr>";
+}
+?>
+
+
+
+
+<?php
+// Array multidimensional asociativo
+$cars = array(
+  array(
+    "marca" => "Volvo",
+    "modelo" => "XC60",
+    "stock" => 22,
+    "vendidos" => 18
+  ),
+  array(
+    "marca" => "BMW",
+    "modelo" => "X5",
+    "stock" => 15,
+    "vendidos" => 13
+  ),
+  array(
+    "marca" => "Saab",
+    "modelo" => "900",
+    "stock" => 5,
+    "vendidos" => 2
+  ),
+  array(
+    "marca" => "Land Rover",
+    "modelo" => "Discovery",
+    "stock" => 17,
+    "vendidos" => 15
+  )
+);
+
+// Recorremos el array con foreach
+foreach ($cars as $car) {
+  echo "Marca: " . $car["marca"] . "<br>";
+  echo "Modelo: " . $car["modelo"] . "<br>";
+  echo "En stock: " . $car["stock"] . "<br>";
+  echo "Vendidos: " . $car["vendidos"] . "<br>";
+  echo "<hr>";
+}
+?>
