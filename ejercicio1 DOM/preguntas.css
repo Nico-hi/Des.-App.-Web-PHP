@@ -1,0 +1,23 @@
+body {
+  display: inline-block;
+}
+
+h2{
+    text-align: center;
+}
+div {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+}
+
+div > section {
+  padding: 2vw;
+  margin: 2vw;
+  width: 300px;
+  height: 300px;
+  border-radius: 60px;
+}
+
+section {
+  background-color: antiquewhite;
+}

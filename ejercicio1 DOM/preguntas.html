@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preguntas</title>
+
+    <link rel="stylesheet" href="preguntas.css" />
+    <script defer src="preguntas.js"></script>
+  </head>
+  <body>
+    <h2>estas son las preguntas</h2>
+    <div id="preguntas">
+      <section id="pregunta1">
+        <img src="" alt="" />
+        <p>
+          ¿Qué función se utiliza para evitar ataques XSS al mostrar datos del
+          usuario en HTML?
+        </p>
+        <p>A&#41; trim&#40;&#41;</p>
+        <p>B&#41; htmlspecialchars&#40;&#41;</p>
+        <p>C&#41; str_replace&#40;&#41;</p>
+        <p>D&#41; urlencode&#40;&#41;</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta2">
+        <img src="" alt="" />
+        <p>¿Cómo se añade un elemento al final de un array en PHP?</p>
+        <p>A&#41; array_add&#40;$arr, $valor&#41;</p>
+        <p>B&#41; array_push&#40;$arr, $valor&#41;</p>
+        <p>C&#41; $arr[] = $valor</p>
+        <p>D&#41; Tanto B como C son correctas</p>
+        <!-- Respuesta correcta: D -->
+      </section>
+
+      <section id="pregunta3">
+        <img src="" alt="" />
+        <p>¿Qué hace la función password_hash&#40;&#41;?</p>
+        <p>A&#41; Verifica si una contraseña coincide con su hash</p>
+        <p>B&#41; Genera un hash seguro de una contraseña</p>
+        <p>C&#41; Encripta la contraseña con AES</p>
+        <p>D&#41; Convierte la contraseña a mayúsculas</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta4">
+        <img src="" alt="" />
+        <p>¿Cuál es la forma correcta de iniciar una sesión en PHP?</p>
+        <p>A&#41; session_create&#40;&#41;</p>
+        <p>B&#41; session_start&#40;&#41;</p>
+        <p>C&#41; start_session&#40;&#41;</p>
+        <p>D&#41; $_SESSION["init"] = true</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta5">
+        <img src="" alt="" />
+        <p>
+          ¿Qué atributo es obligatorio en un formulario para subir archivos?
+        </p>
+        <p>A&#41; method="post"</p>
+        <p>B&#41; enctype="multipart/form-data"</p>
+        <p>C&#41; accept="file"</p>
+        <p>D&#41; action="upload.php"</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta6">
+        <img src="" alt="" />
+        <p>¿Cómo se convierte un array PHP a formato JSON?</p>
+        <p>A&#41; json_decode&#40;$array&#41;</p>
+        <p>B&#41; json_encode&#40;$array&#41;</p>
+        <p>C&#41; serialize&#40;$array&#41;</p>
+        <p>D&#41; implode&#40;" ", $array&#41;</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta7">
+        <img src="" alt="" />
+        <p>¿Qué hace la función move_uploaded_file&#40;&#41;?</p>
+        <p>A&#41; Copia el archivo al servidor</p>
+        <p>B&#41; Mueve el archivo temporal subido a su ubicación definitiva</p>
+        <p>C&#41; Valida que el archivo sea una imagen</p>
+        <p>D&#41; Cambia los permisos del archivo</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta8">
+        <img src="" alt="" />
+        <p>
+          ¿Cuál es la forma más segura de almacenar contraseñas en una base de
+          datos?
+        </p>
+        <p>A&#41; md5&#40;$pass&#41;</p>
+        <p>B&#41; sha1&#40;$pass&#41;</p>
+        <p>C&#41; password_hash&#40;$pass, PASSWORD_DEFAULT&#41;</p>
+        <p>D&#41; base64_encode&#40;$pass&#41;</p>
+        <!-- Respuesta correcta: C -->
+      </section>
+
+      <section id="pregunta9">
+        <img src="" alt="" />
+        <p>¿Qué devuelve la función strtotime&#40;"next Monday"&#41;?</p>
+        <p>A&#41; Una cadena con la fecha del próximo lunes</p>
+        <p>B&#41; Un timestamp &#40;entero&#41; del próximo lunes</p>
+        <p>C&#41; Un objeto DateTime</p>
+        <p>D&#41; El día de la semana actual</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta10">
+        <img src="" alt="" />
+        <p>
+          ¿Cuál de estas opciones NO es necesaria para crear una cookie segura y
+          recomendada?
+        </p>
+        <p>A&#41; Usar el flag HttpOnly</p>
+        <p>B&#41; Usar el flag Secure</p>
+        <p>C&#41; Establecer una fecha de expiración muy lejana</p>
+        <p>D&#41; Usar SameSite=Strict o Lax</p>
+        <!-- Respuesta correcta: C -->
+      </section>
+      <section id="pregunta11">
+        <img src="" alt="" />
+        <p>¿Cuál es la forma abreviada y optimizada de hacer un echo en PHP?</p>
+        <p>A&#41; &lt;? echo "texto"; ?&gt;</p>
+        <p>B&#41; &lt;?="texto"?&gt;</p>
+        <p>C&#41; &lt;?php print "texto"; ?&gt;</p>
+        <p>D&#41; &lt;? write&#40;"texto"&#41;; ?&gt;</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta12">
+        <img src="" alt="" />
+        <p>¿Qué hace el operador === en PHP?</p>
+        <p>A&#41; Compara solo el valor</p>
+        <p>B&#41; Compara valor y tipo de dato</p>
+        <p>C&#41; Asigna un valor por referencia</p>
+        <p>D&#41; Es idéntico al operador ==</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta13">
+        <img src="" alt="" />
+        <p>
+          ¿Cuál de estas funciones NO es segura para mostrar datos enviados por
+          un usuario en HTML?
+        </p>
+        <p>A&#41; htmlspecialchars&#40;&#41;</p>
+        <p>B&#41; echo $_POST['usuario'] directamente</p>
+        <p>C&#41; filter_var&#40;&#41; con FILTER_SANITIZE_STRING</p>
+        <p>D&#41; Usar prepared statements en la base de datos</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta14">
+        <img src="" alt="" />
+        <p>¿Cómo se pasa un parámetro por referencia a una función en PHP?</p>
+        <p>A&#41; function suma&#40;$a, $b&#41;</p>
+        <p>B&#41; function suma&#40;&$a, $b&#41;</p>
+        <p>C&#41; function suma&#40;ref $a, $b&#41;</p>
+        <p>D&#41; function suma&#40;$a as ref, $b&#41;</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta15">
+        <img src="" alt="" />
+        <p>
+          En PDO, ¿cuál es la forma recomendada de ejecutar una consulta
+          preparada con parámetros nombrados?
+        </p>
+        <p>A&#41; $stmt->execute&#40;$id&#41;;</p>
+        <p>B&#41; $stmt->execute&#40;[':id' => $id]&#41;;</p>
+        <p>C&#41; $stmt->bind_param&#40;"i", $id&#41;; $stmt->execute&#40;&#41;;</p>
+        <p>D&#41; $stmt->query&#40;"SELECT ... WHERE id = $id"&#41;;</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <section id="pregunta16">
+        <img src="" alt="" />
+        <p>
+          ¿Cuál de las siguientes funciones está DEPRECIADA y NO debe usarse en
+          PHP moderno?
+        </p>
+        <p>A&#41; mysqli_connect&#40;&#41;</p>
+        <p>B&#41; mysql_connect&#40;&#41;</p>
+        <p>C&#41; new PDO&#40;&#41;</p>
+        <p>D&#41; $mysqli->prepare&#40;&#41;</p>
+        <!-- Respuesta correcta: B -->
+      </section>
+
+      <button>regresar</button>
+    </div>
+  </body>
+</html>

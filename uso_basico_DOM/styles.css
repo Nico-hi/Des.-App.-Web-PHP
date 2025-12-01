@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    transition: 0.3s ease;
+}
+
+.activo {
+    color: purple;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+button {
+    margin-top: 10px;
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+}
