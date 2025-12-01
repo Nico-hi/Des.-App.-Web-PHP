@@ -1,0 +1,15 @@
+[
+    {
+        "nombre":"biblioteca municipal de arganzuela",
+        "abierto":false,
+        "anio de fundacion":1990,
+        "descripcion":null,
+        "categorias":["terror","realismo","romance","alegria","animacion","tristesa"],
+        "libro destacado":{
+            "titulo":"la iliada",
+            "paginas":341,
+            "disponible":false,
+            "wesputo":true
+        }
+    }
+]

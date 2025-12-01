@@ -1,0 +1,43 @@
+[
+  {
+    "curso": "2wet",
+    "alumnos": 7,
+    "lista": [
+      {
+        "nombre": "manuel",
+        "edad": 28,
+        "aprobado": true
+      },
+      {
+        "nombre": "carlos",
+        "edad": 19,
+        "aprobado": false
+      },
+      {
+        "nombre": "nico",
+        "edad": 19,
+        "aprobado": false
+      },
+      {
+        "nombre": "ignacio",
+        "edad": 53,
+        "aprobado": true
+      },
+      {
+        "nombre": "juan",
+        "edad": 25,
+        "aprobado": false
+      },
+      {
+        "nombre": "nick",
+        "edad": 21,
+        "aprobado": true
+      },
+      {
+        "nombre": "alex",
+        "edad": 20,
+        "aprobado": false
+      }
+    ]
+  }
+]

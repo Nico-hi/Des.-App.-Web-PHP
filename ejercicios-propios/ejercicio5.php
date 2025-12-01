@@ -28,11 +28,14 @@
             "precio" => 12.00
         ]
     ];
+
+    echo $productos."<br><br>";
     $producto_json = json_encode($productos);
-    echo $producto_json . "<br>";
+    echo $producto_json . "<br><br>";
 
     $lista = json_decode($producto_json, true); // nos lo devuelve en objetos, en este caso array de arrays
     var_dump($lista);
+    echo "<br><br>";
     foreach ($lista as $producto) {
         echo $producto['nombre'] . " ->" . $producto['precio'] . "<br>";
     }

@@ -1,0 +1,37 @@
+[
+    {
+        "total":135.78,
+        "productos": [
+            {
+                "nombre":"bocadillo",
+                "precio":3,
+                "unidades":2,
+                "digital":false
+            },
+            {
+                "nombre":"v-bucks",
+                "precio":29.99,
+                "unidades":1,
+                "digital":true
+            },
+            {
+                "nombre":"mouse",
+                "precio":19.90,
+                "unidades":2,
+                "digital":false
+            },
+            {
+                "nombre":"steam-key",
+                "precio":9.99,
+                "unidades":1,
+                "digital":true
+            },
+            {
+                "nombre":"programa web",
+                "precio":50,
+                "unidades":1,
+                "digital":true
+            }
+        ]        
+     }
+]

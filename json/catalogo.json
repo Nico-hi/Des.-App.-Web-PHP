@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Origen",
+    "anio": 2010,
+    "disponible": true,
+    "director": {
+      "nombre": "Christopher Nolan",
+      "nacionalidad": ""
+    }
+  },
+  {
+    "nombre": "Parásitos",
+    "anio": 2019,
+    "disponible": false,
+    "director": {
+      "nombre": "Bong Joon-ho",
+      "nacionalidad": "surcoreano"
+    }
+  },
+  {
+    "nombre": "Roma",
+    "anio": 2018,
+    "disponible": true,
+    "director": {
+      "nombre": "Alfonso Cuarón",
+      "nacionalidad": "mexicano"
+    }
+  },
+  {
+    "nombre": "El laberinto del fauno",
+    "anio": 2006,
+    "disponible": false,
+    "director": {
+      "nombre": "Guillermo del Toro",
+      "nacionalidad": "mexicano"
+    }
+  }
+]

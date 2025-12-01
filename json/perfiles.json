@@ -1,0 +1,42 @@
+[
+    {
+        "username":"a",
+        "email":"a@a.a",
+        "telefono":"aaaaaaaaaa",
+        "roles":["admin","a"],
+        "config":{
+            "notificaciones":"a es admin",
+            "temas":"creando un admin"
+        }
+    },
+    {
+        "username":"s",
+        "email":"s@s.s",
+        "telefono":"ssssssssss",
+        "roles":["supervisor","s"],
+        "config":{
+            "notificaciones":"s es supervisor",
+            "temas":"creando un supervisor"
+        }
+    },
+    {
+        "username":"u",
+        "email":"u@u.u",
+        "telefono":"uuuuuuuuuu",
+        "roles":["user","u"],
+        "config":{
+            "notificaciones":"u es un usuario",
+            "temas":"creando un usuario"
+        }
+    },
+    {
+        "username":"m",
+        "email":"m@m.m",
+        "telefono":"mmmmmmmmmm",
+        "roles":["multiweb","m"],
+        "config":{
+            "notificaciones":"m es un usuario multiweb",
+            "temas":"creando un multiweb"
+        }
+    }
+]
