@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo completo eventos para servidor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Formulario de Registro</h2>
+<form id="formulario">
+    <label>
+        Nombre:
+        <input type="text" id="nombre" placeholder="Tu nombre">
+    </label>
+    <br><br>
+    <label>
+        Email:
+        <input type="text" id="email" placeholder="usuario@dominio.com">
+    </label>
+    <div id="mensajeEmail" class="mensaje-error"></div>
+    <br>
+    <label>
+        País:
+        <select id="pais">
+            <option value="">Selecciona</option>
+            <option value="ES">España</option>
+            <option value="FR">Francia</option>
+            <option value="IT">Italia</option>
+        </select>
+    </label>
+    <br><br>
+    <button type="submit">Enviar</button>
+</form>
+
+<h2>Lista de usuarios (clic para seleccionar)</h2>
+<ul id="usuarios">
+    <li>Juan</li>
+    <li>Ana</li>
+    <li>Carlos</li>
+</ul>
+
+<br>
+<button id="botonSaludo">Saludar</button>
+
+<script src="script.js"></script>
+</body>
+</html>

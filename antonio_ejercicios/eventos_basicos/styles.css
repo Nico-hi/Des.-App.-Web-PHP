@@ -1,0 +1,11 @@
+        .error {
+            border-color: red;
+            background-color: #ffe6e6;
+        }
+        .mensaje-error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .seleccionado {
+            background-color: lightblue;
+        }
