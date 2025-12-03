@@ -22,6 +22,24 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
   // esto nos hara la redireccion para la parte del index, la pagina inicial
+  const respuestas_correctas = [
+    "Respuesta correcta: B",
+    "Respuesta correcta: D",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: C",
+    "Respuesta correcta: B",
+    "Respuesta correcta: C",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+    "Respuesta correcta: B",
+  ];
   document.querySelectorAll("button").forEach((e) => {
     e.addEventListener("click", (e) => {
       //   console.log(e.target);
@@ -31,10 +49,13 @@ window.addEventListener("DOMContentLoaded", () => {
         window.location = "index.html";
       }
       if (e.target.textContent == "mostrar respuestas") {
+        let i = 0;
         document
           .querySelectorAll("#preguntas section p:last-child")
           .forEach((e) => {
-            console.log(e);
+            e.textContent = respuestas_correctas[i];
+            //console.log(e.childElementCount);
+            i++;
           });
       }
     });
