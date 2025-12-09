@@ -3,8 +3,8 @@ include "conexion.php";
 
 $texto = $_POST["busqueda"];
 
-$sql = "SELECT nombre, precio FROM productos
-        WHERE nombre LIKE '%$texto%'";
+$sql = "SELECT name_p, price_p FROM product
+        WHERE name_p LIKE '%$texto%'";
 
 $result = $conexion->query($sql);
 

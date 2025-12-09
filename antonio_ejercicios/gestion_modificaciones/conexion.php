@@ -2,8 +2,8 @@
 // Configuración de la conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "Kawaii_456";
-$dbname = "virtual_store";
+$password = "";
+$dbname = "tienda";
 
 // Crear conexión, devolviendo una instancia de la clase mysqli en la variable $conn
 $conexion = new mysqli($servername, $username, $password, $dbname);

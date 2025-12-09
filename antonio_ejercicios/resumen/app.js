@@ -74,7 +74,7 @@ document.getElementById("filtro").addEventListener("submit", e => {
         // Recorremos cada elemento del array 'lista'. Se llama p como se podría haber llamado como sea
         lista.forEach(p => 
             // Creamos un <li> para cada producto con nombre y precio
-            html = html + "<li>" + p.nombre + " - " + p.precio + " Euros</li>"
+            html = html + "<li>" + p.name_p + " - " + p.price_p + " Euros</li>"
         );
 
         /*
