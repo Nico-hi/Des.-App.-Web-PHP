@@ -72,9 +72,14 @@ document.getElementById("filtro").addEventListener("submit", e => {
         let html = ""; // Variable que almacenará el HTML que vamos a insertar dinámicamente
 
         // Recorremos cada elemento del array 'lista'. Se llama p como se podría haber llamado como sea
-        lista.forEach(p => 
-            // Creamos un <li> para cada producto con nombre y precio
-            html = html + "<li>" + p.nombre + " - " + p.precio + " Euros</li>"
+        lista.forEach(p => {
+          if (p.name_p && p.price_p) {// si tiene esos campos es que es un resultado valido
+            html += `<li>${p.name_p} ===>  ${p.price_p}</li>`;
+          } else {// si no, es un mensaje de error u otro tipo de informacion
+            html += `<li>${p.status} ===>  ${p.message}</li>`;
+          }
+        }
+
         );
 
         /*
