@@ -51,6 +51,7 @@
         usuario : $fila[usuario]<br>
         nombre : $fila[nombre]<br><br>";
     }
+    
     ?>
     <?php
     $name_db = "login_post";
