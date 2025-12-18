@@ -1,0 +1,40 @@
+<!-- APLICACION QUE SOLO MEDIANTE LOGIN CORRECTO NOS MANDA A OTRA PÁGINA PRIVADA Y PODEMOS INSERTAR PRODUCTOS -->
+<!--  http://localhost/UD5/login_con_opciones/index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login / Registro</title>
+</head>
+<body>
+
+<h1>Bienvenido</h1>
+
+<div id="zona-publica">
+
+    <div id="bloque-registro">
+        <h2>Registro</h2>
+        <form id="form-registro">
+            <input type="text" name="usuario" placeholder="Usuario"><br>
+            <input type="password" name="contrasena" placeholder="Contraseña"><br>
+            <button>Registrar</button>
+        </form>
+    </div>
+
+    <div id="bloque-login">
+        <h2>Login</h2>
+        <form id="form-login">
+            <input type="text" name="usuario" placeholder="Usuario"><br>
+            <input type="password" name="contrasena" placeholder="Contraseña"><br>
+            <button>Iniciar sesión</button>
+        </form>
+    </div>
+
+</div>
+
+<div id="mensaje"></div>
+
+<script src="js/app-publico.js"></script>
+</body>
+</html>
