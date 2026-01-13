@@ -1,0 +1,67 @@
+<!--  http://localhost/UD5/carrito_compra/public/index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tienda online</title>
+    <!-- Con defer, no nos hace falta poner el enlace al js al final del body. 
+     Esperará a que se cargue el DOM para lanzar script. Es equivalente -->
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <h1>Tienda online</h1>
+
+    <!-- ZONA DE LOGIN -->
+    <section id="zona-login">
+      <div>
+        <h2>Iniciar sesión</h2>
+
+        <form id="form-login">
+          <label>
+            Usuario:
+            <input type="text" name="usuario" required /> </label
+          ><br /><br />
+
+          <label>
+            Contraseña:
+            <input type="password" name="contrasena" required /> </label
+          ><br /><br />
+
+          <button type="submit">Login</button>
+        </form>
+
+        <p id="error-login" style="color: red"></p>
+      </div>
+      <div>
+        <h2>Registrate</h2>
+        <form id="form-register">
+          <label for="usuario">ingresar usuario : </label>
+          <input type="text" name="usuario" id="usuario" />
+          <br /><br />
+
+          <label for="contrasena">ingresar contraseña : </label>
+          <input type="password" name="contrasena" id="contrasena" />
+          <br /><br />
+
+          <button type="submit">Registrate</button>
+
+          <p id="error-register" style="color: red"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ZONA USUARIO LOGUEADO -->
+    <section id="zona-app" style="display: none">
+      <p id="saludo"></p>
+      <button id="btn-logout">Logout</button>
+
+      <h2>Productos</h2>
+      <ul id="productos"></ul>
+
+      <h2>Carrito</h2>
+      <ul id="carrito"></ul>
+      <button id="vaciar">Vaciar carrito</button>
+    </section>
+  </body>
+</html>
