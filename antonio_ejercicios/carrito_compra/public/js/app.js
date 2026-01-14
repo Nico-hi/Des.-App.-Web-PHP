@@ -13,9 +13,10 @@ fetch("session.php")
 
     // Podríamos poner perfectamente el código directamente aquí,
     // pero es mejor separarlo en funciones para no repetir código
-    cargarProductos();
     cargarCarrito();
   });
+
+cargarProductos();
 
 // --------------------------------------------------
 // Cargar productos (fetch directo, función reutilizable)
@@ -73,8 +74,10 @@ function agregarAlCarrito(idProducto) {
   })
     .then((r) => r.json())
     .then((result) => {
-      // console.log(result);
-
+      if (result.login === false) {
+        alert("No autorizado, inicie sesión.");
+        return;
+      }
       cargarCarrito();
     });
 }
@@ -109,7 +112,13 @@ function cargarCarrito() {
 document.getElementById("vaciar").addEventListener("click", () => {
   fetch("carrito_clear.php")
     .then((r) => r.json())
-    .then(() => cargarCarrito());
+    .then((result) => {
+      if (result.login === false) {
+        alert("No autorizado, inicie sesión.");
+        return;
+      }
+      cargarCarrito();
+    });
 });
 // eliminar producto del carrito (evento)
 document.getElementById("carrito").addEventListener("click", (e) => {
@@ -139,7 +148,7 @@ document.getElementById("form-login").addEventListener("submit", (e) => {
       if (data.login) {
         // Ocultamos login, mostramos app
         document.getElementById("zona-login").style.display = "none";
-        document.getElementById("zona-app").style.display = "block";
+        document.getElementById("btn-logout").style.display = "block";
 
         // Saludamos
         document.getElementById("saludo").innerText = "Hola, " + data.usuario;

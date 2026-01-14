@@ -4,7 +4,7 @@ header("Content-Type: application/json");
 require_once "../dao/CarritoDAO.php";
 
 if (!isset($_SESSION["usuario"])) {
-    echo json_encode(["error" => "No autorizado"]);
+    echo json_encode(["login"=> false,"message" => "No autorizado, inicie sesión."]);
     exit;
 }
 
