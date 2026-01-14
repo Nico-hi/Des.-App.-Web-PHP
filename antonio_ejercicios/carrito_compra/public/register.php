@@ -5,6 +5,7 @@ header("Content-Type: application/json");
 
 $usuario = $_POST['usuario'] ?? '';
 $contrasena = $_POST['contrasena'] ?? '';
+
 $usuarioDAO = new UsuarioDAO();
 $resultado = $usuarioDAO->registrar($usuario, $contrasena);
 

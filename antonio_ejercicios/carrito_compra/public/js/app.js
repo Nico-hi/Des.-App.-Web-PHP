@@ -72,7 +72,11 @@ function agregarAlCarrito(idProducto) {
     body: fd, //aquí enviamos la información a PHP (el producto metido)
   })
     .then((r) => r.json())
-    .then(() => cargarCarrito());
+    .then((result) => {
+      // console.log(result);
+
+      cargarCarrito();
+    });
 }
 
 // --------------------------------------------------
@@ -168,21 +172,20 @@ document.getElementById("form-register").addEventListener("submit", (e) => {
   console.log(e.target);
 
   let fd = new FormData(e.target);
-  fetch("register.php", { 
+  fetch("register.php", {
     method: "POST",
-     body: fd 
-    }
-  )
-  .then((r) => r.json())
-  .then((data) => {
-    console.log(data);
-    
-    if (data.success) {
-      document.getElementById("error-register").innerText =
-        "Usuario registrado correctamente. Ya puedes iniciar sesión.";
-    } else {
-      document.getElementById("error-register").innerText =
-        "Error al registrar el usuario. Inténtalo de nuevo.";
-    }
-  });
+    body: fd,
+  })
+    .then((r) => r.json())
+    .then((data) => {
+      console.log(data);
+
+      if (data.success) {
+        document.getElementById("error-register").innerText =
+          "Usuario registrado correctamente. Ya puedes iniciar sesión.";
+      } else {
+        document.getElementById("error-register").innerText =
+          "Error al registrar el usuario. Inténtalo de nuevo.";
+      }
+    });
 });

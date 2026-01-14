@@ -20,13 +20,16 @@ class UsuarioDAO
         ]);
 
         $fila = $stmt->fetch(PDO::FETCH_ASSOC);
-        if (password_verify($contrasena, $fila['contrasena'])) {
+
+        if (!$fila) {
             return null;
         }
 
-        if ($fila) {
-            return new Usuario($fila["usuario"]);
+        if (!password_verify($contrasena, $fila['contrasena'])) {
+            return null;
         }
+        return new Usuario($fila["usuario"]);
+
 
     }
 
@@ -39,7 +42,7 @@ class UsuarioDAO
             return (["success" => false, "message" => "La contraseña no puede estar vacía."]);
 
         }
-        $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
+        $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT);
 
 
         // Verificar si el usuario ya existe
@@ -63,12 +66,14 @@ class UsuarioDAO
 
         $exito = $stmt->execute([
             ":u" => $usuario,
-            ":c" => $contrasena
+            ":c" => $contrasena_hash
         ]);
 
         if ($exito) {
             return ["success" => true, "message" => "Usuario registrado exitosamente."];
         } else {
+            # por si no sabemos el error
+            # $stmt->errorInfo()
             return ["success" => false, "message" => "Error al registrar el usuario."];
         }
     }

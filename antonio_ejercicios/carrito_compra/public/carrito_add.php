@@ -12,6 +12,7 @@ if (!isset($_SESSION["usuario"])) {
 $productoId = $_POST["producto_id"];
 
 $dao = new CarritoDAO();
-$dao->agregar($_SESSION["usuario"], $productoId);
+$result= $dao->agregar($_SESSION["usuario"], $productoId);
 
-echo json_encode(["ok" => true]);
+echo json_encode(["ok" => $result["result"]]);
+# , 'dao'=> $dao ,"idp"=>$productoId, "idu"=> $_SESSION["usuario"]]
