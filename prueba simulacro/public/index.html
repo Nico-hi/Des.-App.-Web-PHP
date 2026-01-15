@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pre-examen</title>
+    <script defer src="js/libros.js"></script>
     <script defer src="js/sesion.js"></script>
-    <script defer src="js/sesion.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <section id="user-sesion">
-        <section class="user-login">
-            <h2>Iniciar Sesión</h2>
-            <form id="loginForm">
-                <label for="usernameLogin">Usuario:</label>
-                <input type="text" name="usernameLogin" id="usernameLogin" required>
-                <label for="passwordLogin">Contraseña:</label>
-                <input type="text" name="passwordLogin" id="passwordLogin">
-                <input id="loginSubmit" type="submit" value="Iniciar Sesión">
-            </form>
-        </section>
-        <section class="user-register">
-            <h2>Registrarse</h2>
-            <form id="registerForm">
-                <label for="usernameRegister">Usuario:</label>
-                <input type="text" name="usernameRegister" id="usernameRegister" required>
-                <label for="passwordRegister">Contraseña:</label>
-                <input type="text" name="passwordRegister" id="passwordRegister" required>
-                <input id="registerSubmit" type="submit" value="Registrate">
-            </form>
-            <p id="salidaR"> </p>
-        </section>
+      <section class="user-login">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+          <label for="usernameLogin">Usuario:</label>
+          <input type="text" name="usernameLogin" id="usernameLogin" required />
+          <label for="passwordLogin">Contraseña:</label>
+          <input type="text" name="passwordLogin" id="passwordLogin" />
+          <input id="loginSubmit" type="submit" value="Iniciar Sesión" />
+        </form>
+      </section>
+      <section class="user-register">
+        <h2>Registrarse</h2>
+        <form id="registerForm">
+          <label for="usernameRegister">Usuario:</label>
+          <input
+            type="text"
+            name="usernameRegister"
+            id="usernameRegister"
+            required
+          />
+          <label for="passwordRegister">Contraseña:</label>
+          <input
+            type="text"
+            name="passwordRegister"
+            id="passwordRegister"
+            required
+          />
+          <input id="registerSubmit" type="submit" value="Registrate" />
+        </form>
+        <p id="salidaR"></p>
+      </section>
     </section>
 
-    <section id="index" style="display: none;">
-        <h2>hol</h2>
+    <section id="index" style="display: none">
+      <button id="logout">logout</button>
+      <h2>Libros</h2>
+      <p class="message-libros"></p>
+      <section class="libros"></section>
+      <h2>favoritos</h2>
+      <p class="message-favoritos"></p>
+      <section class="favoritos"></section>
     </section>
-    
-</body>
+  </body>
 </html>

@@ -8,7 +8,7 @@ class DataBase
             if (self::$conn === null) {
                 $dns = "mysql:host=localhost;dbname=pre_examen;charset=utf8";
                 $username = "root";
-                $password = "";
+                $password = "root";
                 self::$conn = new PDO($dns, $username, $password);
                 self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
