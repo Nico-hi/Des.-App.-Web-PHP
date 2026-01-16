@@ -10,7 +10,7 @@ $password = $_POST["passwordLogin"];
 $dao = new UsuarioDAO();
 $result = $dao->login($username, $password);
 // echo json_encode($result);
-if ($result['login']) {
+if ($result) {
     $_SESSION['usuario'] = $username;
     $_SESSION['id'] = $result->getId();
     echo json_encode(['login' => true, 'usuario' => $username]);
