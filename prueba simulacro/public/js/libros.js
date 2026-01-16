@@ -30,7 +30,6 @@ function cargarFavoritos() {
     .then((result) => result.json())
     .then((libros) => {
       console.log(libros);
-
       let html = "<ul>";
       for (let libro of libros) {
         html += `<li>${libro.titulo} - ${libro.autor} <button class='del-favorito' data-id='${libro.id}'>No favoritos</button></li>`;
@@ -50,14 +49,19 @@ function cargarFavoritos() {
     });
 }
 
-function cargarLibros() {
-  let salida = document.querySelector(".libros");
+function cargarLibros(clase) {
+  console.log(clase);
+  
+  let salida = document.querySelector(`.${clase}`);
   fetch("mostrar-libros.php")
     .then((result) => result.json())
     .then((libros) => {
+      // console.log(libros);
+      
       let html = "<ul>";
       for (let libro of libros) {
-        html += `<li>${libro.titulo} - ${libro.autor} <button class='add-favorito' data-id='${libro.id}'>favoritos</button></li>`;
+        let boton = (clase == "prelibros")?"":`<button class='add-favorito' data-id='${libro.id}'>favoritos</button>`
+        html += `<li>${libro.titulo} - ${libro.autor} ${boton}</li>`;
       }
       html += "</ul>";
 
@@ -73,3 +77,4 @@ function cargarLibros() {
       salida.textContent = "no se pudo cargar" + error;
     });
 }
+
