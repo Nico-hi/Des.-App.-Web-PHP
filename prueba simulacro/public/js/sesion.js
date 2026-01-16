@@ -32,7 +32,8 @@ document.querySelector("#loginForm").addEventListener("submit", (e) => {
         cargarLibros();
         cargarFavoritos();
       }
-    });
+      document.getElementById("salidaR").innerText = data.message;
+    })
 });
 
 //logica para cerrar sesion
@@ -42,7 +43,7 @@ document.getElementById("logout").addEventListener("click", () => {
   })
     .then((response) => response.json())
     .then((result) => {
-      if (result.logout){
+      if (result.logout) {
         document.getElementById("index").style.display = "none";
         document.getElementById("user-sesion").style.display = "block";
       }

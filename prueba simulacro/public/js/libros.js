@@ -44,10 +44,10 @@ function cargarFavoritos() {
           cargarFavoritos();
         });
       });
+    })
+    .catch((error) => {
+      salida.textContent = "no se pudo cargar porque --> " + error;
     });
-  // .catch((error) => {
-  //   salida.textContent = "no se pudo cargar porque --> " + error;
-  // });
 }
 
 function cargarLibros() {

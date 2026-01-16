@@ -6,24 +6,30 @@ class favoritosDAO
 {
     public function getFavoritos($usuarioId)
     {
-        $libros = [];
-        $salida = [];
-        $conn = DataBase::getConnection();
-        $stmt = $conn->prepare("select * from libros l where l.id in ( select f.libro_id  from favoritos f where f.usuario_id = :u)");
-        $stmt->execute([
-            ":u" => $usuarioId
-        ]);
-        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $libros[] = new Libro($result['id'], $result['titulo'], $result['autor']);
+        try {
+            $libros = [];
+            $salida = [];
+            $conn = DataBase::getConnection();
+            $stmt = $conn->prepare("select * from libros l where l.id in ( select f.libro_id  from favoritos f where f.usuario_id = :u)");
+            $stmt->execute([
+                ":u" => $usuarioId
+            ]);
+            while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $libros[] = new Libro($result['id'], $result['titulo'], $result['autor']);
+            }
+            foreach ($libros as $libro) {
+                $salida[] = [
+                    'id' => $libro->getId(),
+                    'titulo' => $libro->getTitulo(),
+                    'autor' => $libro->getAutor(),
+                ];
+            }
+            return $salida;
+
+        } catch (Exception $e) {
+            return ["message" => $e];
+
         }
-        foreach ($libros as $libro) {
-            $salida[] = [
-                'id' => $libro->getId(),
-                'titulo' => $libro->getTitulo(),
-                'autor' => $libro->getAutor(),
-            ];
-        }
-        return $salida;
     }
 
     public static function add_favorito($usuarioId, $libroId)
@@ -49,14 +55,20 @@ class favoritosDAO
     }
     public static function del_favorito($usuarioId, $libroId)
     {
-        $conn = DataBase::getConnection();
-        $stmt = $conn->prepare("delete from favoritos where usuario_id = :u and libro_id = :l");
-        $stmt->execute([
-            ":u" => $usuarioId,
-            ":l" => $libroId,
-        ]);
-        if ($stmt)
-            return ["del" => true, "message" => "libro eliminado de favoritos"];
-        return ["del" => false, "message" => "libro no fue eliminado de favoritos"];
+        try {
+            $conn = DataBase::getConnection();
+            $stmt = $conn->prepare("delete from favoritos where usuario_id = :u and libro_id = :l");
+            $stmt->execute([
+                ":u" => $usuarioId,
+                ":l" => $libroId,
+            ]);
+            if ($stmt)
+                return ["del" => true, "message" => "libro eliminado de favoritos"];
+            return ["del" => false, "message" => "libro no fue eliminado de favoritos"];
+
+        } catch (Exception $e) {
+            return ["del" => false, "message" => $e];
+
+        }
     }
 }
