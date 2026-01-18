@@ -1,0 +1,17 @@
+<?php
+class DataBase
+{
+    private static $conn;
+
+    public static function getConnection()
+    {
+        if (self::$conn === null) {
+            $dns = "mysql:host=localhost;dbname=curso_matricula;charset=utf8";
+            $usuario = "root";
+            $contrasena = "root";
+            self::$conn = new PDO($dns, $usuario, $contrasena);
+            self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            }
+        return self::$conn;
+    }
+}

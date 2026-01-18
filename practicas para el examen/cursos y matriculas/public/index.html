@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <script defer src="js/cursos.js"></script>
+    <script defer src="js/login.js"></script>
+  </head>
+  <body>
+    <section id="acceso">
+      <form id="login" method="POST">
+        <h2>Inicia Sesión</h2>
+        <label for="usuario-l">usuario :</label>
+        <input type="text" name="usuario-l" id="usuario-l" />
+        <br /><br />
+        <label for="contrasena-l">contraseña :</label>
+        <input type="password" name="contrasena-l" id="contrasena-l" />
+
+        <input type="submit" value="login" id="btn-login" />
+      </form>
+      <p id="message-l"></p>
+
+      <form id="register" method="POST" style="display: block;">
+        <h2>Registrate</h2>
+        <label for="usuario-r">usuario :</label>
+        <input type="text" name="usuario-r" id="usuario-r" />
+        <br /><br />
+        <label for="contrasena-r">contraseña :</label>
+        <input type="password" name="contrasena-r" id="contrasena-r" />
+        <input type="submit" value="register" id="btn-register" />
+      </form>
+      <form id="register-admin" method="POST" style="display: none;">
+        <h2>Registrate Admin</h2>
+        <label for="usuario-ra">usuario :</label>
+        <input type="text" name="usuario-ra" id="usuario-ra" />
+        <br /><br />
+        <label for="contrasena-ra">contraseña :</label>
+        <input type="password" name="contrasena-ra" id="contrasena-ra" />
+        <input type="submit" value="register-admin" id="btn-register-admin" />
+      </form>
+      <p id="message-r"></p>
+    </section>
+    <section id="cursos" style="display: none;">
+        <h2>estos son los cursos a los que puedes matricularte</h2>
+        <section id="listado"></section>
+        <button id="salir">salir</button>
+        <button id="matriculado">matricula</button>
+    </section>
+    <section id="matricula" style="display: none;">
+        <section id="lista_mat"></section>
+        <button id="regresar">regresar</button>
+    </section>
+    
+  </body>
+</html>
