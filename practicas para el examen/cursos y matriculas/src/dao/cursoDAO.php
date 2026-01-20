@@ -42,7 +42,7 @@ class CursoDAO
         if(!isset($cursos)) {
             return ["message"=>"no tienes cursos"];
         }
-        if(count($cursos) < 2) {
+        if(count($cursos) === 2) {
             return ["id" => $cursos[0]->getId(), "curso" => $cursos[0]->curso, "descripcion" => $cursos[0]->descripcion];
         }
         foreach ($cursos as $curso) {

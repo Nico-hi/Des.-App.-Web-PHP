@@ -30,7 +30,7 @@ const cargarMatricula = () => {
   fetch("./../src/controller/cargar-matricula.php")
     .then((result) => result.json())
     .then((cursos) => {
-      // console.log(cursos);
+       console.log(cursos);
       if (cursos.message) {
         document.getElementById("lista_mat").innerHTML = cursos.message;
         return;
@@ -38,7 +38,7 @@ const cargarMatricula = () => {
 
       let salida = "<ul>";
 
-      if (cursos) {
+      if (cursos.length === 1) {
         salida += `<li>Curso: ${cursos.curso} </br> 
         descripcion: ${cursos.descripcion}</br>
          <button class='desmatricularse' data-id=${cursos.id}>desmatricularse</button class='matricularse'> </li>
