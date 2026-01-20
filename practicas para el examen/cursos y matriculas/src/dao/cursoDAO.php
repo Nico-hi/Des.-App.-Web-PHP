@@ -39,6 +39,12 @@ class CursoDAO
         }
         // return $cursos;
         $lista = [];
+        if(!isset($cursos)) {
+            return ["message"=>"no tienes cursos"];
+        }
+        if(count($cursos) < 2) {
+            return ["id" => $cursos[0]->getId(), "curso" => $cursos[0]->curso, "descripcion" => $cursos[0]->descripcion];
+        }
         foreach ($cursos as $curso) {
             $lista[] = ["id" => $curso->getId(), "curso" => $curso->curso, "descripcion" => $curso->descripcion];
         }
@@ -81,5 +87,17 @@ class CursoDAO
         }
         return ["funciono" => false, "message" => "la matricula no se hizo quito correctamente"];
 
+    }
+
+    public static function eliminar($usuario){
+    $conn = Database::getConnection();
+    $stmt = $conn->prepare("delete from matriculas where usuario_id = :u ");
+    $result = $stmt->execute([
+        ":u"=> $usuario
+    ]);
+    if ($result) {
+        return ["delete"=> true, "message"=> "le elimino la matricula"];
+        }
+        return ["delete"=> false, "message"=> "no se pudo eliminar la matricula"];
     }
 }

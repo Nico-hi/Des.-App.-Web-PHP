@@ -77,18 +77,28 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       });
   });
-  
+
   // boton para mostrar las matriculas que hizo dicho usuario
-  
+
   document.getElementById("matriculado").addEventListener("click", () => {
-          matricula.style.display = "block";
-          cursos.style.display = "none";     
-          cargarMatricula();   
+    matricula.style.display = "block";
+    cursos.style.display = "none";
+    cargarMatricula();
   });
-  
+
   document.getElementById("regresar").addEventListener("click", () => {
-          matricula.style.display = "none";
-          cursos.style.display = "block";        
+    matricula.style.display = "none";
+    cursos.style.display = "block";
   });
 });
 
+// boton para vaciar la matricula
+document.getElementById("vaciar").addEventListener("click", () => {
+  fetch("./../src/controller/vaciar-matricula.php")
+    .then((result) => result.json())
+    .then((data) => {
+      alert(data.message);
+    cargarMatricula();
+
+    });
+});
