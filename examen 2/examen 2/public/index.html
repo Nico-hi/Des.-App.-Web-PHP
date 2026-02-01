@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>examen 2</title>
+    <script defer src="js/login.js"></script>
+  </head>
+  <body>
+    <!--  seccion de login -->
+    <div id="login">
+      <h2>Iniciar Sesion</h2>
+      <form method="POST">
+        <label for="usuario">usuario : </label>
+        <input type="text" name="usuario" id="usuario" required />
+        <label for="contrasena">contrasena : </label>
+        <input
+          type="password"
+          name="contrasena"
+          id="contrasena"
+          required
+          autocomplete="false"
+        />
+        <input type="submit" value="iniciar sesion" />
+      </form>
+      <p id="messagelogin"></p>
+    </div>
+    <!-- seccion de la incidencias -->
+    <div id="incidencias" style="display: none">
+      <h2>crear incidencia</h2>
+      <!-- formulario de crear incidencia -->
+      <form method="post" id="crear-incidencia">
+        <label for="titulo">titulo : </label>
+        <input
+          type="text"
+          name="titulo"
+          id="titulo"
+          required
+          autocomplete="false"
+        />
+        <label for="descripcion">descripcion : </label>
+        <input
+          type="text"
+          name="descripcion"
+          id="descripcion"
+          required
+          autocomplete="false"
+        />
+        <label for="estado">estado : </label>
+        <select name="estado" id="estado">
+          <option value="abierta">abierta</option>
+          <option value="resuelta">resuelta</option>
+        </select>
+        <input type="submit" value="creat incidencia" />
+      </form>
+
+      <!-- boton para cerrar sesion -->
+      <button id="salir">salir</button>
+      <!-- apartado donde apareceran las incidencias  -->
+      <h2>incidencias</h2>
+      <div id="lista-incidencias"></div>
+    </div>
+  </body>
+</html>

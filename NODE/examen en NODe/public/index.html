@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>examen 2 en Node</title>
+    <script defer src="js/incidencias.js"></script>
+    <script defer src="js/login.js"></script>
+  </head>
+  <body>
+    <!--  seccion de login -->
+    <div id="login">
+      <section id="sec-regis">
+        <h2>Registrate</h2>
+        <form method="POST">
+          <label for="usuario_r">usuario : </label>
+          <input type="text" name="usuario_r" id="usuario_r" required />
+          <label for="contrasena_r">contrasena : </label>
+          <input
+            type="password"
+            name="contrasena_r"
+            id="contrasena_r"
+            required
+            autocomplete="false"
+          />
+          <input type="submit" value="iniciar sesion" />
+        </form>
+        <p id="messageregis"></p>
+      </section>
+      <section id="sec-login">
+        <h2>Iniciar Sesion</h2>
+        <form method="POST">
+          <label for="usuario_l">usuario : </label>
+          <input type="text" name="usuario_l" id="usuario_l" required />
+          <label for="contrasena_l">contrasena : </label>
+          <input
+            type="password"
+            name="contrasena_l"
+            id="contrasena_l"
+            required
+            autocomplete="false"
+          />
+          <input type="submit" value="iniciar sesion" />
+        </form>
+        <p id="messagelogin"></p>
+      </section>
+    </div>
+    <!-- seccion de la incidencias -->
+    <div id="incidencias" style="display: none">
+      <h2>crear incidencia</h2>
+      <!-- formulario de crear incidencia -->
+      <form method="post" id="crear-incidencia">
+        <label for="titulo">titulo : </label>
+        <input
+          type="text"
+          name="titulo"
+          id="titulo"
+          required
+          autocomplete="false"
+        />
+        <label for="descripcion">descripcion : </label>
+        <input
+          type="text"
+          name="descripcion"
+          id="descripcion"
+          required
+          autocomplete="false"
+        />
+        <label for="estado">estado : </label>
+        <select name="estado" id="estado">
+          <option value="abierta">abierta</option>
+          <option value="resuelta">resuelta</option>
+        </select>
+        <input type="submit" value="creat incidencia" />
+      </form>
+
+      <!-- boton para cerrar sesion -->
+      <button id="salir">salir</button>
+      <p id="messageloguot"></p>
+      <!-- apartado donde apareceran las incidencias  -->
+      <h2>incidencias</h2>
+      <div id="lista-incidencias"></div>
+    </div>
+  </body>
+</html>
