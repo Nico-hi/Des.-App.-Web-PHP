@@ -1,7 +1,7 @@
 let lista_incidencias = document.getElementById("lista-incidencias");
 
 function cambiarEstado(id, estado) {
-  console.log(id, estado);
+  // console.log(id, estado);
 
   fetch(`http://localhost:3000/incidencia/actualizar/${id}`, {
     method: "POST",
@@ -10,13 +10,13 @@ function cambiarEstado(id, estado) {
   })
     .then((restult) => restult.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       cargarIncidencias();
     });
 }
 
 function eliminarIncidencia(id) {
-  console.log(id);
+  // console.log(id);
 
   fetch(`http://localhost:3000/incidencia/borrar/${id}`, {
     method: "POST",
@@ -25,7 +25,7 @@ function eliminarIncidencia(id) {
   })
     .then((restult) => restult.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       cargarIncidencias();
     });
 }
@@ -34,7 +34,7 @@ function cargarIncidencias() {
   fetch("http://localhost:3000/incidencias")
     .then((restult) => restult.json())
     .then((data) => {
-      console.log(data.rows);
+      // console.log(data.rows);
       let lista = "<ul>";
       data.rows.forEach((incidencia) => {
         lista += `<li style='margin-bottom:10px;'>

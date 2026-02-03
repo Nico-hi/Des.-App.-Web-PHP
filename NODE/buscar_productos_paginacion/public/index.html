@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Búsqueda de productos</title>
+</head>
+<body>
+
+  <h1>Buscar productos</h1>
+
+  <form id="formBusqueda">
+    <input type="text" name="texto" placeholder="Buscar producto">
+
+    <select name="orden">
+      <option value="nombre">Ordenar por nombre</option>
+      <option value="precio">Ordenar por precio</option>
+    </select>
+
+    <select name="direccion">
+      <option value="asc">Ascendente</option>
+      <option value="desc">Descendente</option>
+    </select>
+
+    <button>Buscar</button>
+  </form>
+
+  <ul id="resultados"></ul>
+
+  <div id="paginacion">
+    <button id="prev">⬅ Anterior</button>
+    <span id="paginaActual">1</span>
+    <button id="next">Siguiente ➡</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -9,6 +9,6 @@ app.use(express.static("public"));
 const productosRoutes = require("./routes/productosRoutes");
 app.use("/productos", productosRoutes);
 
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log("Servidor escuchando en http://localhost:3000");
 });
