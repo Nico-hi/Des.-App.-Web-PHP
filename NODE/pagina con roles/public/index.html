@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sesion con roles</title>
+    <script src="js/productos.js"></script>
+    <script src="js/session.js"></script>
+  </head>
+  <body>
+    <section id="session">
+      <section class="admin" style="display: none">
+        <h2>Resgitrar Admin</h2>
+        <form method="post">
+          <label for="usuario_a">usuario : </label>
+          <input type="text" name="usuario" id="usuario_a" />
+          <br /><br />
+          <label for="contrasena_a">contrasena : </label>
+          <input type="password" name="contrasena" id="contrasena_a" />
+          <input type="submit" value="registrate" />
+        </form>
+      </section>
+      <section class="user" style="display: none">
+        <h2>Registrar Usuario</h2>
+        <form method="post">
+          <label for="usuario_u">usuario : </label>
+          <input type="text" name="usuario" id="usuario_u" />
+          <br /><br />
+          <label for="contrasena_u">contrasena : </label>
+          <input type="password" name="contrasena" id="contrasena_u" />
+          <input type="submit" value="registrate" />
+        </form>
+      </section>
+      <p id="messagereg"></p>
+      <section class="login">
+        <h2>Iniciar Sesión</h2>
+        <form method="post">
+          <label for="usuario_l">usuario : </label>
+          <input type="text" name="usuario" id="usuario_l" />
+          <br /><br />
+          <label for="contrasena_l">contrasena : </label>
+          <input type="password" name="contrasena" id="contrasena_l" />
+          <input type="submit" value="iniciar sesión" />
+        </form>
+      </section>
+      <p id="messagelog"></p>
+    </section>
+    <section id="tienda" style="display: none">
+      <header>
+        <button class="salir">salir</button>
+        <button class="carrito">carrito</button>
+      </header>
+      <main style="display: grid; grid-template-columns: 18vw auto">
+        <section class="t-admin" style="display: none">
+          <form method="post">
+            <label for="nombre">nombre :</label>
+            <input type="text" name="nombre" id="nombre" />
+            <label for="precio">precio :</label>
+            <input type="number" name="precio" id="precio" />
+            <label for="stock">stock :</label>
+            <input type="number" name="stock" id="stock" />
+            <label for="categoria">categoria</label>
+            <select name="categoria" id="caregoria">
+              <option value="electronica">electronica</option>
+              <option value="ropa">ropa</option>
+              <option value="hogar">hogar</option>
+            </select>
+            <input type="submit" value="crear" />
+          </form>
+        </section>
+        <section class="t-normal"></section>
+      </main>
+    </section>
+    <section id="carrito" style="display: none"></section>
+  </body>
+</html>

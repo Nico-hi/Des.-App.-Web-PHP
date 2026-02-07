@@ -1,0 +1,19 @@
+Crear esta tabla:
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+y para desplegar la app ejecutar:
+
+
+npm init -y
+
+npm install express
+npm install mysql2
+npm install bcrypt
+npm install express-session
+
+node app.js

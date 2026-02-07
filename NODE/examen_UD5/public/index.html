@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos CRUD SPA</title>
+</head>
+<body>
+  <h1>Aplicación de incidencias</h1>
+
+<form id="formRegistro">
+  <h1>Registro</h1>
+  <input name="usuario" placeholder="Usuario">
+  <input name="password" type="password" placeholder="Contraseña">
+  <button>Registrar</button>
+</form>
+
+
+<form id="formLogin">
+  <h1>Login</h1>
+  <input name="usuario" placeholder="Usuario">
+  <input name="password" type="password" placeholder="Contraseña">
+  <button>Login</button>
+</form>
+
+<div id="crud" style="display:none">
+  <button id="btnLogout">Logout</button>
+  <h1>Buscar incidencias</h1>
+  <form id="formBusqueda">
+    <input name="texto" placeholder="Buscar incidencia">
+    <button>Buscar</button>
+  </form>
+  <ul id="resultados"></ul>
+
+  <hr>
+
+  <h2>Insertar incidencia</h2>
+  <form id="formInsertar">
+    <input name="titulo" placeholder="Titulo">
+    <input name="descripcion" placeholder="Descripcion">
+    <button>Insertar</button>
+  </form>
+
+
+  <hr>
+
+  <h2>Resolver incidencias</h2>
+  <form id="formActualizar">
+    <input name="id" placeholder="ID">
+    <button>Marcar como resuelta</button>
+  </form>
+
+  <hr>
+
+  <h2>Eliminar incidencia</h2>
+  <form id="formEliminar">
+    <input name="id" placeholder="ID">
+    <button>Eliminar</button>
+  </form>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
