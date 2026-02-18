@@ -1,0 +1,5 @@
+
+instala lo siguiente:
+npm init -y
+npm install express axios dotenv
+y crea un fichero .env con tu APIKEY
