@@ -31,15 +31,25 @@ export const login = async (req, res) => {
     req.session.usuario = {
       id: userDB.id,
       usuario: userDB.usuario,
+      role: userDB.role,
     };
-
+    // console.log(req.session.usuario);
     return res.json({
       login: true,
       message: "usuario logueado",
+      role: req.session.usuario.role,
     });
   }
   return res.json({
     login: false,
     message: "usuario no logueado",
+  });
+};
+
+export const logout = async (req, res) => {
+  req.session.destroy();
+  return res.json({
+    logout: true,
+    message: "usuario deslogueado",
   });
 };

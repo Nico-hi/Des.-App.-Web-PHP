@@ -17,8 +17,11 @@
         <input type="password" name="contrasena" id="contrasena" />
         <input type="submit" value="acceder" />
       </form>
-      <h2 id="salida-session"></h2>
+      <p id="error"></p>
     </div>
-    <div id="content"></div>
+    <div id="content" style="display: none">
+      <h1>“Bienvenido/a, tienes rol <span class="role"></span>”</h1>
+      <button type="button" id="logout">logout</button>
+    </div>
   </body>
 </html>

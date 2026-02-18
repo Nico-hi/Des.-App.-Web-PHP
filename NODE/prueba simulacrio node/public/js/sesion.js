@@ -15,6 +15,28 @@ document.getElementById("login").addEventListener("submit", (e) => {
     .then((result) => result.json())
     .then((data) => {
       console.log(data);
-    })
-    .catch();
+      if (!data.login) {
+        document.getElementById("error").textContent = data.message;
+        return;
+      }
+      document.getElementById("error").textContent = "";
+      document.getElementById("session").style.display = "none";
+      document.getElementById("content").style.display = "block";
+      document.querySelector("#content .role").textContent = data.role;
+    });
+});
+
+document.getElementById("logout").addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch("http://localhost:3000/logout")
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data);
+      if (!data.logout) {
+        document.getElementById("error").textContent = data.message;
+        return;
+      }
+      document.getElementById("session").style.display = "block";
+      document.getElementById("content").style.display = "none";
+    });
 });
