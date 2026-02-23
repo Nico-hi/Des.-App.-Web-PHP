@@ -22,6 +22,47 @@
     <div id="content" style="display: none">
       <h1>“Bienvenido/a, tienes rol <span class="role"></span>”</h1>
       <button type="button" id="logout">logout</button>
+      <div id="acciones" style="display: none">
+        <h2>Acciones que puedes realizar</h2>
+        <div>
+          <h3>registrar libro</h3>
+          <form method="post" id="nuevo_l">
+            <label for="titulo">titulo : </label>
+            <input type="text" name="titulo" id="titulo" /> <br /><br />
+            <label for="autor">autor : </label>
+            <input type="text" name="autor" id="autor" /> <br /><br />
+            <input type="submit" value="registrar" />
+          </form>
+        </div>
+        <div>
+          <h3>registrar usuario</h3>
+          <form method="post" id="nuevo_u">
+            <label for="usuario_r">usuario : </label>
+            <input type="text" name="usuario_r" id="usuario_r" /> <br /><br />
+            <label for="contrasena_r">contrasena : </label>
+            <input type="password" name="contrasena_r" id="contrasena_r" />
+            <br /><br />
+            <input type="radio" name="role" id="user" value="user" checked>
+            <label for="user">user</label>
+            <input type="radio" name="role" id="admin" value="admin">
+            <label for="admin">admin</label>
+            <br /><br />
+            <input type="submit" value="registrar" />
+          </form>
+      <p id="error_n"></p>
+
+        </div>
+      </div>
+      <hr>
+      <div id="libros">
+        <h2>Libros</h2>
+        <div>
+          <input type="text" id="search" placeholder="Buscar título o autor" />
+          <button type="button" id="btn-search">Buscar</button>
+        </div>
+        <section id="libros-list"></section>
+        <div id="libros-pagination"></div>
+      </div>
     </div>
   </body>
 </html>
