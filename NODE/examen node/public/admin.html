@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simulacro node</title>
+    <script defer src="js/sesion-admin.js"></script>
+  </head>
+  <body>
+    <h1>registrar admin</h1>
+    <form method="post" id="register">
+      <label for="usuario">usuario : </label>
+      <input type="text" name="usuario" id="usuario" /> <br /><br />
+      <label for="contrasena">contrasena : </label>
+      <input type="password" name="contrasena" id="contrasena" />
+      <p id="error"></p>
+      <input type="submit" value="registrar" />
+      <button type="button" onclick='window.location.href = "http\://localhost:3000/"'>iniciar sesion</button>
+    </form>
+  </body>
+</html>

@@ -11,6 +11,7 @@ class ProductoDAO {
 
         const [rows] = await pool.execute(sql, [`%${texto}%`]);
         return rows;
-    } }
+    }
+}
 
 module.exports = ProductoDAO;

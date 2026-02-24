@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simulacro node</title>
+    <script defer src="js/productos.js"></script>
+    <script defer src="js/sesion.js"></script>
+  </head>
+  <body>
+    <div id="session">
+      <h1>Iniciar sesion</h1>
+      <form method="post" id="login">
+        <label for="usuario">usuario : </label>
+        <input type="text" name="usuario" id="usuario" /> <br /><br />
+        <label for="contrasena">contrasena : </label>
+        <input type="password" name="contrasena" id="contrasena" />
+        <input type="submit" value="acceder" />
+      </form>
+      <p id="error"></p>
+    </div>
+    <div id="content" style="display: none">
+      <h1>“Bienvenido/a,<span class="name"></span>”</h1>
+      <button type="button" id="logout">logout</button>
+      <div id="acciones" style="display: none">
+        <h2>Acciones que puedes realizar</h2>
+        <div>
+          <h3>registrar producto</h3>
+          <form method="post" id="nuevo_producto">
+            <label for="nombre">nombre : </label>
+            <input type="text" name="nombre" id="nombre" /> <br /><br />
+            <label for="precio">precio : </label>
+            <input type="number" step="0.01" name="precio" id="precio" /> <br /><br />
+            <label for="descripcion">descripcion : </label>
+            <input type="text" name="descripcion" id="descripcion" /> <br /><br />
+            <input type="submit" value="registrar" />
+          </form>
+        </div>
+        <div>
+          <h3>registrar usuario</h3>
+          <form method="post" id="nuevo_u">
+            <label for="usuario_r">usuario : </label>
+            <input type="text" name="usuario_r" id="usuario_r" /> <br /><br />
+            <label for="contrasena_r">contrasena : </label>
+            <input type="password" name="contrasena_r" id="contrasena_r" />
+            <br /><br />
+            <input type="radio" name="role" id="user" value="user" checked>
+            <label for="user">user</label>
+            <input type="radio" name="role" id="admin" value="admin">
+            <label for="admin">admin</label>
+            <br /><br />
+            <input type="submit" value="registrar" />
+          </form>
+      <p id="error_n"></p>
+
+        </div>
+      </div>
+      <hr>
+      <div id="clima" style="display: none">
+
+      </div>
+      <hr>
+      <div id="productos">
+        <h2>Productos</h2>
+        <div>
+          <input type="text" id="search" placeholder="Buscar nombre o descripción" />
+          <button type="button" id="btn-search">Buscar</button>
+        </div>
+        <section id="productos-list"></section>
+        <div id="productos-pagination"></div>
+      </div>
+    </div>
+  </body>
+</html>

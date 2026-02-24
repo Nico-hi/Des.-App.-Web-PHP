@@ -2,7 +2,7 @@ document.getElementById("formBusqueda").addEventListener("submit", e => {
     e.preventDefault();
     const texto = e.target.texto.value; // recoge el valor del input
 
-    fetch("http://localhost:3000/productos/buscar", {
+    fetch("http://localhost:3001/productos/buscar", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ texto })
